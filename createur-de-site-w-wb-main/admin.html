@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Créateur_site_web/webmobile</title>
+
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@1&display=swap" rel="stylesheet" />
+    <!-- script -->
+    <script src="https://kit.fontawesome.com/81855dfb83.js" crossorigin="anonymous"></script>
+    <!-- styles-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="public/css/style.css" />
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="d-flex-justify-content-arround">
+            <div class="col-md-12">
+                <nav class="nav nav-pills flex-column flex-sm-row " style="margin-top: 2em;">
+                    <!-- btn competence -->
+                    <button class="flex-sm-fill text-sm-center nav-link active bg-dark rounded-pill" type="button" data-toggle="collapse" data-target="#mySkill" aria-expanded="true" aria-controls="mySkill">Competence</button>
+                    <!-- btn presentation -->
+                    <button class="flex-sm-fill text-sm-center nav-link active bg-dark rounded-pill" type="button" data-toggle="collapse" data-target="#presentation" aria-expanded="true" aria-controls="presentation">Presentation</button>
+                    <!-- btn utilisateur -->
+                    <button class="flex-sm-fill text-sm-center nav-link active bg-dark rounded-pill" type="button" data-toggle="collapse" data-target="#user" aria-expanded="true" aria-controls="user">Utilisateur</button>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section class="container ">
+        <div class class="d-flex-justify-arround">
+            <div class="col-md-12 borber border-dark">
+                <div class="accordion" id="accordionExample">
+
+                    <!-- collaps competence -->
+                    <div class="card" style="margin-top: 2em;">
+                        <div id="mySkill" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card">
+                                <table class="table">
+                                    <!-- table competense -->
+                                    <!-- head de mon tableau -->
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">image</td>
+                                            <td scope="col">titre</td>
+                                            <td scope="col">date</td>
+                                            <td scope="col">description</td>
+                                            <td scope="col">actions</td>
+                                        </tr>
+                                    </thead>
+                                    <!-- body tableau -->
+                                    <tbody>
+                                        <!-- item n°1 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px;" src="public/image/html.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°2 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 38px ; " src="public/image/css.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°3 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px ; " src="public/image/sass.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°4 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px ; " src="public/image/js.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Edit -->
+                    <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal Edit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Modal Edit -->
+
+                    <!-- Modal Delete -->
+                    <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal Delete</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Modal Delete -->
+
+                    <!-- collaps presentation -->
+                    <div class="card" style="margin-top: 2em;">
+                        <div id="presentation" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card">
+                                <table class="table">
+                                    <!-- table presentation -->
+                                    <!-- head de mon tableau -->
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">image</td>
+                                            <td scope="col">titre</td>
+                                            <td scope="col">date</td>
+                                            <td scope="col">description</td>
+                                            <td scope="col">actions</td>
+                                        </tr>
+                                    </thead>
+                                    <!-- body tableau -->
+                                    <tbody>
+                                        <!-- item n°1 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px;" src="public/image/site de pizza1.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°2 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 38px ; " src="public/image/site de vacance.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°3 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px ; " src="public/image/sass.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°4 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px ; " src="public/image/js.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Edit -->
+                    <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal Edit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Modal Edit -->
+
+                    <!-- Modal Delete -->
+                    <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal Delete</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Modal Delete -->
+
+                    <!-- collaps utilisateur -->
+                    <div class="card" style="margin-top: 2em;">
+                        <div id="user" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card">
+                                <table class="table">
+                                    <!-- table presentation -->
+                                    <!-- head de mon tableau -->
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">image</td>
+                                            <td scope="col">titre</td>
+                                            <td scope="col">date</td>
+                                            <td scope="col">description</td>
+                                            <td scope="col">actions</td>
+                                        </tr>
+                                    </thead>
+                                    <!-- body tableau -->
+                                    <tbody>
+                                        <!-- item n°1 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px;" src="public/image/html.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°2 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 38px ; " src="public/image/css.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°3 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px ; " src="public/image/sass.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- item n°4 tableau -->
+                                        <tr>
+                                            <th scope="col">
+                                                <img style="height: 35px ; " src="public/image/js.png" alt=" "></th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalEdit">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Edit -->
+                    <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal Edit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Modal Edit -->
+
+                    <!-- Modal Delete -->
+                    <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal Delete</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Modal Delete -->
+                </div>
+            </div>
+    </section>
+
+
+
+
+</body>
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="public/js/jquery.js "></script>
+<script src="public/js/popper.js "></script>
+<script src="public/js/bootstrap.js "></script>
+
+</html>
